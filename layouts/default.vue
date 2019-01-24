@@ -1,10 +1,28 @@
 <template>
-  <div>
-    <nuxt />
+  <div class="container-fluid">
+    <div class="row top-nav" />
+    <div class="row">
+      <div class="col-3 sidebar">
+        <side-bar />
+      </div>
+      <div class="col">
+        <nuxt />
+      </div>
+    </div>
   </div>
 </template>
+<script>
+import Sidebar from '../components/Sidebar.vue'
+export default {
+  components: {
+    'side-bar': Sidebar
+  }
+}
+</script>
 
-<style>
+<style lang="scss">
+@import '~/assets/variables.scss';
+
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -51,5 +69,16 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.sidebar {
+  background-color: purple;
+  padding: 0;
+  margin-top: -$top-nav-height;
+}
+
+.top-nav {
+  height: $top-nav-height;
+  box-shadow: 0px 1px 3px grey;
 }
 </style>

@@ -1,72 +1,84 @@
 <template>
   <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        live-2019
-      </h1>
-      <h2 class="subtitle">
-        HackDavis Live Site
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+    <h3>Schedule</h3>
+    <div class="d-flex">
+      <button class="btn btn-primary">
+        All
+      </button>
+      <button class="btn btn-primary">
+        Fun
+      </button>
+      <button class="btn btn-primary">
+        Food
+      </button>
+      <button class="btn btn-primary">
+        Workshops
+      </button>
+      <button class="btn btn-primary">
+        Important
+      </button>
+    </div>
+    <div class="schedule-grid">
+      <div class="schedule-row" v-for="item in schedule" :key="item.id">
+        <div class="schedule-time">{{item.startTime}}</div>
+        <div class="schedule-name">{{item.name}}</div>
+        <div class="schedule-description">{{item.description}}</div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+function getSchedule($axios) {
+  return $axios
+    .$get('https://hackdavisapp.herokuapp.com/parse/classes/Schedule', {
+      headers: {
+        'X-Parse-Application-Id': 'hackdavis2019'
+      },
+      params: {
+        include: 'tags'
+      }
+    })
+    .then(
+      response => {
+        console.log(response)
+        return {
+          schedule: response.results.map(item => {
+            return {
+              id: item.objectId,
+              name: item.name,
+              startTime: item.startTime.iso,
+              endTime: item.endTime.iso,
+              description: item.description,
+              tags: item.tags
+            }
+          })
+        }
+      },
+      error => console.error(error)
+    )
+}
 export default {
-  components: {
-    Logo
+  asyncData({ $axios }) {
+    return getSchedule($axios)
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+<style lang="scss">
+.schedule-grid {
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+  padding-left: 0;
+  padding-right: 0;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.schedule-row {
+  display: flex;
+  align-items: center;
 }
-
-.links {
-  padding-top: 15px;
+.schedule-time {
+  padding: 15px;
+}
+.schedule-name {
+  flex-basis: 15em;
 }
 </style>
