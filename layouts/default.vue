@@ -1,11 +1,15 @@
 <template>
   <div class="container-fluid">
-    <div class="row top-nav" />
+    <div class="row top-nav navbar-light">
+      <button class="navbar-toggler" @click="toggleClosed" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
     <div class="row">
-      <div class="col-3 sidebar">
-        <side-bar />
-      </div>
-      <div class="col">
+        <div class="col-3 sidebar" :class="{hidden: closed}" id="nav_collapse">
+          <side-bar />
+        </div>
+      <div class="col main">
         <nuxt />
       </div>
     </div>
@@ -14,8 +18,24 @@
 <script>
 import Sidebar from '../components/Sidebar.vue'
 export default {
+  data() {
+    let closed = false;
+    if (typeof window !== 'undefined') {
+      if(window.innerWidth <= 576) {
+        closed = true
+      }
+    }
+    return {
+      closed: closed
+    }
+  },
   components: {
     'side-bar': Sidebar
+  },
+  methods: {
+    toggleClosed() {
+      this.closed = !this.closed;
+    }
   }
 }
 </script>
@@ -73,8 +93,19 @@ html {
 
 .sidebar {
   background-color: purple;
-  padding: 0;
-  margin-top: -$top-nav-height;
+  padding: 2rem;
+  min-width: 250px;
+  &.hidden {
+    transform: translateX(-100%);
+    position: absolute;
+    z-index: 2;
+  }
+  transform: translateX(0);
+  transition: transform ease-in-out 0.25s;
+}
+
+.main {
+  padding: 2rem;
 }
 
 .top-nav {

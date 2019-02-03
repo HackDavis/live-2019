@@ -19,48 +19,51 @@
       </button>
     </div>
     <div class="schedule-grid">
-      <div class="schedule-row" v-for="item in schedule" :key="item.id">
-        <div class="schedule-time">{{item.startTime}}</div>
-        <div class="schedule-name">{{item.name}}</div>
-        <div class="schedule-description">{{item.description}}</div>
+      <div v-for="item in schedule" :key="item.id" class="schedule-row">
+        <div class="schedule-time">
+          {{ item.startTime }}
+        </div>
+        <div class="schedule-name">
+          {{ item.name }}
+        </div>
+        <div class="schedule-description">
+          {{ item.description }}
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-function getSchedule($axios) {
-  return $axios
-    .$get('https://hackdavisapp.herokuapp.com/parse/classes/Schedule', {
+async function getSchedule($axios) {
+  const response = await $axios.$get(
+    'https://hackdavisapp.herokuapp.com/parse/classes/Schedule',
+    {
       headers: {
         'X-Parse-Application-Id': 'hackdavis2019'
       },
       params: {
         include: 'tags'
       }
+    }
+  )
+  return {
+    schedule: response.results.map(item => {
+      return {
+        id: item.objectId,
+        name: item.name,
+        startTime: item.startTime.iso,
+        endTime: item.endTime.iso,
+        description: item.description,
+        tags: item.tags
+      }
     })
-    .then(
-      response => {
-        console.log(response)
-        return {
-          schedule: response.results.map(item => {
-            return {
-              id: item.objectId,
-              name: item.name,
-              startTime: item.startTime.iso,
-              endTime: item.endTime.iso,
-              description: item.description,
-              tags: item.tags
-            }
-          })
-        }
-      },
-      error => console.error(error)
-    )
+  }
 }
 export default {
-  asyncData({ $axios }) {
-    return getSchedule($axios)
+  async asyncData({ $axios }) {
+    const result = await getSchedule($axios)
+    return result
   }
 }
 </script>
