@@ -1,6 +1,6 @@
 <template>
-  <section class="container">
-    <h3>Schedule</h3>
+  <section class="container-fluid">
+    <h3 class="font-weight-bold">Schedule</h3>
     <div class="d-flex">
       <button class="btn btn-primary">
         All
@@ -20,13 +20,16 @@
     </div>
     <div class="schedule-grid">
       <div v-for="item in schedule" :key="item.id" class="schedule-row">
-        <div class="schedule-time">
+        <div class="schedule-color">
+
+        </div>
+        <div class="schedule-time font-weight-bold">
           {{ timeToString(item.startTime) }} - {{ timeToString(item.endTime) }}
         </div>
-        <div class="schedule-name">
+        <div class="schedule-name font-weight-bold d-flex flex-column justify-content-center">
           {{ item.name }}
         </div>
-        <div class="schedule-description">
+        <div class="schedule-description font-weight-light d-flex flex-column justify-content-center">
           {{ item.description }}
         </div>
       </div>
@@ -87,16 +90,31 @@ export default {
   max-height: 500px;
   overflow-y: scroll;
 }
+.schedule-color {
+  width: 0.5rem;
+  background-color: burlywood;
+}
 .schedule-row {
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  border-radius: 5px;
+  border: solid 1px #707070;
+  margin-top: 1rem;
+  background-color: #f5f5f5;
+  overflow: auto;
 }
 .schedule-time {
   padding: 15px;
   flex-shrink: 0;
   flex-basis: 12rem;
+  background-color: white;
+  border-right: 1px solid #707070;
 }
 .schedule-name {
   flex-basis: 15em;
+  padding-left: 1rem;
+}
+.schedule-description {
+  flex-grow: 1;
 }
 </style>

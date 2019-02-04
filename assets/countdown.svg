@@ -1,1 +1,267 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245 355"><defs><style>.cls-1,.cls-3,.cls-4{fill:none;}.cls-1{stroke:#95ffde;}.cls-2{fill:#106580;}.cls-3{stroke:#5cbebe;stroke-width:2px;}.cls-5{fill:#487b89;}</style></defs><title>countdown_no_text</title><g id="Group_60" data-name="Group 60"><path id="Path_13" data-name="Path 13" class="cls-1" d="M245,64.6H195.9" transform="translate(0)"/><path id="Path_13-2" data-name="Path 13-2" class="cls-1" d="M245,88.4H195.9" transform="translate(0)"/><path id="Path_13-3" data-name="Path 13-3" class="cls-1" d="M245,112.2H195.9" transform="translate(0)"/><path id="Path_13-4" data-name="Path 13-4" class="cls-1" d="M245,136H195.9" transform="translate(0)"/><path id="Path_13-5" data-name="Path 13-5" class="cls-1" d="M245,159.8H195.9" transform="translate(0)"/><path id="Path_13-6" data-name="Path 13-6" class="cls-1" d="M245,183.6H195.9" transform="translate(0)"/><path id="Path_13-7" data-name="Path 13-7" class="cls-1" d="M245,207.4H195.9" transform="translate(0)"/><path id="Path_13-8" data-name="Path 13-8" class="cls-1" d="M245,231.2H195.9" transform="translate(0)"/><path id="Path_13-9" data-name="Path 13-9" class="cls-1" d="M245,254.9H195.9" transform="translate(0)"/><path id="Path_14" data-name="Path 14" class="cls-1" d="M245,302.5H195.9" transform="translate(0)"/><path id="Path_13-10" data-name="Path 13-10" class="cls-1" d="M245,278.7H195.9" transform="translate(0)"/></g><g id="Rectangle_38" data-name="Rectangle 38"><rect class="cls-2" x="48.1" y="10.3" width="148.3" height="344.66" rx="15" ry="15"/><rect class="cls-3" x="49.1" y="11.3" width="146.3" height="342.66" rx="14" ry="14"/></g><g id="Rectangle_39" data-name="Rectangle 39"><rect class="cls-4" x="80.3" y="43.4" width="82.7" height="279.5" rx="15" ry="15"/><rect class="cls-3" x="81.3" y="44.4" width="80.7" height="277.5" rx="14" ry="14"/></g><line id="Line_3" data-name="Line 3" class="cls-3" x1="122.2" y1="10.9" x2="122.2" y2="44"/><g id="Ellipse_2" data-name="Ellipse 2"><circle class="cls-5" cx="122.7" cy="10.3" r="10.3"/><circle class="cls-3" cx="122.7" cy="10.3" r="9.3"/></g><g id="Group_59" data-name="Group 59"><path id="Path_13-11" data-name="Path 13-11" class="cls-1" d="M49.1,64.6H0" transform="translate(0)"/><path id="Path_13-12" data-name="Path 13-12" class="cls-1" d="M49.1,88.4H0" transform="translate(0)"/><path id="Path_13-13" data-name="Path 13-13" class="cls-1" d="M49.1,112.2H0" transform="translate(0)"/><path id="Path_13-14" data-name="Path 13-14" class="cls-1" d="M49.1,136H0" transform="translate(0)"/><path id="Path_13-15" data-name="Path 13-15" class="cls-1" d="M49.1,159.8H0" transform="translate(0)"/><path id="Path_13-16" data-name="Path 13-16" class="cls-1" d="M49.1,183.6H0" transform="translate(0)"/><path id="Path_13-17" data-name="Path 13-17" class="cls-1" d="M49.1,207.4H0" transform="translate(0)"/><path id="Path_13-18" data-name="Path 13-18" class="cls-1" d="M49.1,231.2H0" transform="translate(0)"/><path id="Path_13-19" data-name="Path 13-19" class="cls-1" d="M49.1,254.9H0" transform="translate(0)"/><path id="Path_14-2" data-name="Path 14-2" class="cls-1" d="M49.1,302.5H0" transform="translate(0)"/><path id="Path_13-20" data-name="Path 13-20" class="cls-1" d="M49.1,278.7H0" transform="translate(0)"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 245 355"
+   version="1.1"
+   sodipodi:docname="countdown.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata51">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview49"
+     showgrid="false"
+     inkscape:zoom="21.273239"
+     inkscape:cx="116.21537"
+     inkscape:cy="343.05908"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1,.cls-3,.cls-4{fill:none;}.cls-1{stroke:#95ffde;}.cls-2{fill:#106580;}.cls-3{stroke:#5cbebe;stroke-width:2px;}.cls-5{fill:#487b89;}</style>
+  </defs>
+  <title
+     id="title6">countdown_no_text</title>
+  <g
+     id="Group_60"
+     data-name="Group 60">
+    <path
+       id="Path_13"
+       data-name="Path 13"
+       class="cls-1"
+       d="M245,64.6H195.9"
+       transform="translate(0)" />
+    <path
+       id="Path_13-2"
+       data-name="Path 13-2"
+       class="cls-1"
+       d="M245,88.4H195.9"
+       transform="translate(0)" />
+    <path
+       id="Path_13-3"
+       data-name="Path 13-3"
+       class="cls-1"
+       d="M245,112.2H195.9"
+       transform="translate(0)" />
+    <path
+       id="Path_13-4"
+       data-name="Path 13-4"
+       class="cls-1"
+       d="M245,136H195.9"
+       transform="translate(0)" />
+    <path
+       id="Path_13-5"
+       data-name="Path 13-5"
+       class="cls-1"
+       d="M245,159.8H195.9"
+       transform="translate(0)" />
+    <path
+       id="Path_13-6"
+       data-name="Path 13-6"
+       class="cls-1"
+       d="M245,183.6H195.9"
+       transform="translate(0)" />
+    <path
+       id="Path_13-7"
+       data-name="Path 13-7"
+       class="cls-1"
+       d="M245,207.4H195.9"
+       transform="translate(0)" />
+    <path
+       id="Path_13-8"
+       data-name="Path 13-8"
+       class="cls-1"
+       d="M245,231.2H195.9"
+       transform="translate(0)" />
+    <path
+       id="Path_13-9"
+       data-name="Path 13-9"
+       class="cls-1"
+       d="M245,254.9H195.9"
+       transform="translate(0)" />
+    <path
+       id="Path_14"
+       data-name="Path 14"
+       class="cls-1"
+       d="M245,302.5H195.9"
+       transform="translate(0)" />
+    <path
+       id="Path_13-10"
+       data-name="Path 13-10"
+       class="cls-1"
+       d="M245,278.7H195.9"
+       transform="translate(0)" />
+  </g>
+  <g
+     id="Rectangle_38"
+     data-name="Rectangle 38">
+    <rect
+       class="cls-2"
+       x="48.1"
+       y="10.3"
+       width="148.3"
+       height="344.66"
+       rx="15"
+       ry="15"
+       id="rect20" />
+    <rect
+       class="cls-3"
+       x="49.1"
+       y="11.3"
+       width="146.3"
+       height="342.66"
+       rx="14"
+       ry="14"
+       id="rect22" />
+  </g>
+  <g
+     id="Rectangle_39"
+     data-name="Rectangle 39">
+    <rect
+       class="cls-4"
+       x="80.3"
+       y="43.4"
+       width="82.7"
+       height="279.5"
+       rx="15"
+       ry="15"
+       id="rect25" />
+    <rect
+       class="cls-3"
+       x="81.3"
+       y="44.4"
+       width="80.7"
+       height="277.5"
+       rx="14"
+       ry="14"
+       id="rect27" />
+  </g>
+  <line
+     id="Line_3"
+     data-name="Line 3"
+     class="cls-3"
+     x1="122.2"
+     y1="10.9"
+     x2="122.2"
+     y2="44" />
+  <g
+     id="Ellipse_2"
+     data-name="Ellipse 2">
+    <circle
+       class="cls-5"
+       cx="122.7"
+       cy="10.3"
+       r="10.3"
+       id="circle31" />
+    <circle
+       class="cls-3"
+       cx="122.7"
+       cy="10.3"
+       r="9.3"
+       id="circle33" />
+  </g>
+  <g
+     id="Group_59"
+     data-name="Group 59">
+    <path
+       id="Path_13-11"
+       data-name="Path 13-11"
+       class="cls-1"
+       d="M49.1,64.6H0"
+       transform="translate(0)" />
+    <path
+       id="Path_13-12"
+       data-name="Path 13-12"
+       class="cls-1"
+       d="M49.1,88.4H0"
+       transform="translate(0)" />
+    <path
+       id="Path_13-13"
+       data-name="Path 13-13"
+       class="cls-1"
+       d="M49.1,112.2H0"
+       transform="translate(0)" />
+    <path
+       id="Path_13-14"
+       data-name="Path 13-14"
+       class="cls-1"
+       d="M49.1,136H0"
+       transform="translate(0)" />
+    <path
+       id="Path_13-15"
+       data-name="Path 13-15"
+       class="cls-1"
+       d="M49.1,159.8H0"
+       transform="translate(0)" />
+    <path
+       id="Path_13-16"
+       data-name="Path 13-16"
+       class="cls-1"
+       d="M49.1,183.6H0"
+       transform="translate(0)" />
+    <path
+       id="Path_13-17"
+       data-name="Path 13-17"
+       class="cls-1"
+       d="M49.1,207.4H0"
+       transform="translate(0)" />
+    <path
+       id="Path_13-18"
+       data-name="Path 13-18"
+       class="cls-1"
+       d="M49.1,231.2H0"
+       transform="translate(0)" />
+    <path
+       id="Path_13-19"
+       data-name="Path 13-19"
+       class="cls-1"
+       d="M49.1,254.9H0"
+       transform="translate(0)" />
+    <path
+       id="Path_14-2"
+       data-name="Path 14-2"
+       class="cls-1"
+       d="M49.1,302.5H0"
+       transform="translate(0)" />
+    <path
+       id="Path_13-20"
+       data-name="Path 13-20"
+       class="cls-1"
+       d="M49.1,278.7H0"
+       transform="translate(0)" />
+  </g>
+  <path
+     style="fill:#63eac0;fill-opacity:1;stroke-width:0.18802966"
+     d="m 120.35186,20.20764 c -3.61829,-0.916855 -6.69395,-4.037157 -7.5474,-7.656948 -1.19217,-5.0564461 1.78093,-10.2839951 6.8091,-11.97228326 1.4732,-0.494651 4.371,-0.540181 5.89474,-0.09262 3.405,1.00014016 6.16339,3.79879616 7.03237,7.13500616 0.37791,1.45092 0.37047,4.0645111 -0.0153,5.3639101 -0.96848,3.262327 -3.28593,5.7503 -6.41368,6.885613 -1.55639,0.564939 -4.24109,0.722165 -5.75985,0.337319 z"
+     id="path4571"
+     inkscape:connector-curvature="0" />
+</svg>

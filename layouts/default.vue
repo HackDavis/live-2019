@@ -168,7 +168,8 @@ html {
 }
 
 body {
-  font-family: Montserrat, Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
+  color: #053848;
 }
 </style>
