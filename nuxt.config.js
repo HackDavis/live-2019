@@ -29,7 +29,10 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{ src: '~/plugins/parse.js', ssr: false }],
+  plugins: [
+    { src: '~/plugins/parse.js', ssr: false },
+    { src: '~/plugins/font-awesome.js' }
+  ],
 
   /*
   ** Nuxt.js modules
@@ -37,7 +40,8 @@ module.exports = {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-svg-loader',
   ],
 
   /*

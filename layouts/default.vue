@@ -2,21 +2,28 @@
   <div class="container-fluid">
     <div class="row top-nav navbar-light">
       <button class="navbar-toggler" @click="toggleClosed" type="button">
-        <span class="navbar-toggler-icon"></span>
+        <font-awesome-icon size="lg" :icon="closed ? 'bars' : 'times'" />
+      </button>
+      <button class="btn btn-twitter" type="button" @click="closeTwitter = !closeTwitter">
+        <font-awesome-icon size="lg" :icon="['fab', 'twitter']" />
       </button>
     </div>
     <div class="row">
-        <div class="col-3 sidebar" :class="{hidden: closed}" id="nav_collapse">
+        <div class="col-3 sidebar-left" :class="{hidden: closed}" id="nav_collapse">
           <side-bar />
         </div>
       <div class="col main">
         <nuxt />
+      </div>
+      <div class="col-3 sidebar-right" :class="{hidden: closeTwitter}">
+        <timeline :id="'hack_davis'" :sourceType="'profile'" :options="{height: 600}"/>
       </div>
     </div>
   </div>
 </template>
 <script>
 import Sidebar from '../components/Sidebar.vue'
+import {Timeline} from 'vue-tweet-embed'
 export default {
   data() {
     let closed = false;
@@ -26,11 +33,13 @@ export default {
       }
     }
     return {
-      closed: closed
+      closed: closed,
+      closeTwitter: true
     }
   },
   components: {
-    'side-bar': Sidebar
+    'side-bar': Sidebar,
+    'timeline': Timeline
   },
   methods: {
     toggleClosed() {
@@ -91,17 +100,46 @@ html {
   background-color: #35495e;
 }
 
-.sidebar {
-  background-color: purple;
+.sidebar-left {
+  background-color: #053848;
   padding: 2rem;
   min-width: 250px;
+  flex-basis: 20%;
+  max-width: 20%;
   &.hidden {
     transform: translateX(-100%);
     position: absolute;
-    z-index: 2;
+    z-index: 3;
+  }
+  transform: translateX(0);
+  transition: transform ease-in-out 0.2s;
+  @media(max-width: 768px) {
+    position: absolute;
+    z-index: 3;
+  }
+}
+
+.sidebar-right {
+  padding: 2rem;
+  min-width: 250px;
+  flex-basis: 25%;
+  max-width: 25%;
+  background-color: white;
+  &.hidden {
+    transform: translateX(100%);
+    position: absolute;
+    right: 0;
+    z-index: 3;
   }
   transform: translateX(0);
   transition: transform ease-in-out 0.25s;
+  box-shadow: 0px 3px 5px grey;
+  height: 100vh;
+  @media(max-width: 768px) {
+    position: absolute;
+    right: 0;
+    z-index: 3;
+  }
 }
 
 .main {
@@ -111,5 +149,26 @@ html {
 .top-nav {
   height: $top-nav-height;
   box-shadow: 0px 1px 3px grey;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+}
+
+.btn-twitter {
+  font-size: 20px;
+  color: #053848;
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.top-nav .navbar-toggler {
+  border-color: transparent;
+  color: #053848;
+}
+
+body {
+  font-family: Montserrat, Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
 }
 </style>

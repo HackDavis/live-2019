@@ -1,22 +1,25 @@
 <template>
   <div class="d-flex justify-content-center">
     <div class="d-flex flex-column sidebar-content">
+      <div>
+        <CountdownSVG />
+      </div>
       <button class="btn btn-light submit-button">
-        Submit
+        Devpost
       </button>
       <ul class="nav flex-column">
         <li class="nav-item">
-          <nuxt-link class="nav-link" active-class="active" to="/">
+          <nuxt-link :active-class="'active'" exact class="nav-link" to="/">
             Schedule
           </nuxt-link>
         </li>
         <li class="nav-item">
-          <nuxt-link class="nav-link" to="/map">
+          <nuxt-link :active-class="'active'" exact class="nav-link" to="/map">
             Map
           </nuxt-link>
         </li>
         <li class="nav-item">
-          <nuxt-link class="nav-link" to="/prizes">
+          <nuxt-link :active-class="'active'" exact class="nav-link" to="/prizes">
             APIs &amp; Prizes
           </nuxt-link>
         </li>
@@ -30,16 +33,13 @@
             Hardware
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://devpost.com/">
-            Devpost
-          </a>
-        </li>
       </ul>
     </div>
   </div>
 </template>
 <script>
+import CountdownSVG from '@/assets/countdown.svg'
+
 const hackathonEnd = new Date(2019, 2, 10, 12)
 
 export default {
@@ -50,6 +50,9 @@ export default {
       minutes: Math.floor(delta / 60000) % 60,
       seconds: Math.floor(delta / 1000) % 60
     }
+  },
+  components: {
+    CountdownSVG
   },
   beforeMount() {
     this.timer = setInterval(this.setTime, 1000)
@@ -79,13 +82,20 @@ export default {
   min-width: 200px;
 }
 .sidebar-content .nav-link {
-  color: white;
+  color: #c6c6c6;
   padding-left: 0;
+  &.active {
+    color: white;
+  }
+}
+.nav {
+  margin-top: 1rem;
 }
 .sidebar-content .nav-link:hover {
   color: lightblue;
 }
 .submit-button {
   width: 100%;
+  margin-top: 1rem;
 }
 </style>

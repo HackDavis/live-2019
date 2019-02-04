@@ -21,7 +21,7 @@
     <div class="schedule-grid">
       <div v-for="item in schedule" :key="item.id" class="schedule-row">
         <div class="schedule-time">
-          {{ item.startTime }}
+          {{ timeToString(item.startTime) }} - {{ timeToString(item.endTime) }}
         </div>
         <div class="schedule-name">
           {{ item.name }}
@@ -52,8 +52,8 @@ async function getSchedule($axios) {
       return {
         id: item.objectId,
         name: item.name,
-        startTime: item.startTime.iso,
-        endTime: item.endTime.iso,
+        startTime: new Date(item.startTime.iso),
+        endTime: new Date(item.endTime.iso),
         description: item.description,
         tags: item.tags
       }
@@ -64,6 +64,17 @@ export default {
   async asyncData({ $axios }) {
     const result = await getSchedule($axios)
     return result
+  },
+  methods: {
+    timeToString(date) {
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
+      var ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      minutes = minutes < 10 ? '0'+minutes : minutes;
+      return hours + ':' + minutes + ' ' + ampm;
+    }
   }
 }
 </script>
@@ -73,6 +84,8 @@ export default {
   display: block;
   padding-left: 0;
   padding-right: 0;
+  max-height: 500px;
+  overflow-y: scroll;
 }
 .schedule-row {
   display: flex;
@@ -80,6 +93,8 @@ export default {
 }
 .schedule-time {
   padding: 15px;
+  flex-shrink: 0;
+  flex-basis: 12rem;
 }
 .schedule-name {
   flex-basis: 15em;
