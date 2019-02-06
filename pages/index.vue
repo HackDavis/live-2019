@@ -1,26 +1,14 @@
 <template>
   <section class="container-fluid">
     <h3 class="font-weight-bold">Schedule</h3>
-    <div class="d-flex">
-      <button class="btn btn-primary">
-        All
-      </button>
-      <button class="btn btn-primary">
-        Fun
-      </button>
-      <button class="btn btn-primary">
-        Food
-      </button>
-      <button class="btn btn-primary">
-        Workshops
-      </button>
-      <button class="btn btn-primary">
-        Important
-      </button>
-    </div>
+    <b-form-radio-group id="categories"
+                        buttons
+                        button-variant="outline-primary"
+                        v-model="selector.selected"
+                        :options="selector.options" />
     <div class="schedule-grid">
-      <div v-for="item in schedule" :key="item.id" class="schedule-row">
-        <div class="schedule-color">
+      <div v-for="item in activeItems" :key="item.id" class="schedule-row">
+        <div class="schedule-color" :class="{ yellow: hasScheduleTag(item, 'Fun'), red: hasScheduleTag(item, 'Logistics'), green: hasScheduleTag(item, 'Workshops'), purple: hasScheduleTag(item, 'Meals') }">
 
         </div>
         <div class="schedule-time font-weight-bold d-flex flex-column justify-content-center">
@@ -38,6 +26,8 @@
 </template>
 
 <script>
+
+
 async function getSchedule($axios) {
   const response = await $axios.$get(
     'https://hackdavisapp.herokuapp.com/parse/classes/Schedule',
@@ -68,15 +58,43 @@ export default {
     const result = await getSchedule($axios)
     return result
   },
+  data () {
+    return {
+      selector: {
+        selected: "all",
+        options: [
+          {text: "All", value: "all"},
+          {text: "Workshops", value: 'Workshops'},
+          {text: "Fun", value: 'Fun'},
+          {text: "Logistics", value: "Logistics"},
+          {text: "Food", value: "Meals"}
+        ]
+      }
+    }
+  },
+  computed: {
+    activeItems() {
+      if(this.selector.selected == "all") {
+        return this.schedule;
+      }
+      return this.schedule.filter(el => this.hasScheduleTag(el, this.selector.selected));
+    }
+  },
   methods: {
     timeToString(date) {
-      var hours = date.getHours();
-      var minutes = date.getMinutes();
+      var hours = date.getUTCHours();
+      var minutes = date.getUTCMinutes();
       var ampm = hours >= 12 ? 'PM' : 'AM';
       hours = hours % 12;
       hours = hours ? hours : 12; // the hour '0' should be '12'
       minutes = minutes < 10 ? '0'+minutes : minutes;
       return hours + ':' + minutes + ' ' + ampm;
+    },
+    findScheduleTag(item, tag) {
+      return item.tags.find(el => el.name == tag);
+    },
+    hasScheduleTag(item, tag) {
+      return typeof this.findScheduleTag(item, tag) !== 'undefined'
     }
   }
 }
@@ -92,7 +110,6 @@ export default {
 }
 .schedule-color {
   width: 0.5rem;
-  background-color: burlywood;
   flex-shrink: 0;
   flex-grow: 0;
 }
@@ -132,5 +149,22 @@ export default {
     padding: 1rem;
     border-top: 1px solid #053848;
   }
+}
+.schedule-color {
+  &.red {
+    background-color: #c15a5a;
+  }
+  &.yellow {
+    background-color: #d6a83f;
+  }
+  &.purple {
+    background-color: #8d73d3;
+  }
+  &.green {
+    background-color: #409887;
+  }
+}
+#categories .btn-outline-primary {
+  box-shadow: none;
 }
 </style>
