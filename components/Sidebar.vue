@@ -3,7 +3,7 @@
     <Countdown />
       <a href="https://hackdavis2019.devpost.com/">
         <button class="btn btn-light submit-button" type="button">
-          Devpost
+          Submit
         </button>
       </a>
     <ul class="nav flex-column">
