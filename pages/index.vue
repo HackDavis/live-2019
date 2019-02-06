@@ -1,11 +1,20 @@
 <template>
-  <section class="container-fluid">
-    <h3 class="font-weight-bold">Schedule</h3>
-    <b-form-radio-group id="categories"
-                        buttons
-                        button-variant="outline-primary"
-                        v-model="selector.selected"
-                        :options="selector.options" />
+  <section class="container-fluid d-flex flex-column main-content">
+    <div class="header">
+      <h3 class="font-weight-bold">Schedule</h3>
+      <div class="d-flex justify-content-between align-items-start selectors">
+        <b-form-radio-group id="categories"
+                          buttons
+                          button-variant="outline-primary"
+                          v-model="selector.selected"
+                          :options="selector.options" />
+        <b-form-radio-group id="date"
+                          buttons
+                          button-variant="outline-primary"
+                          v-model="date.selected"
+                          :options="date.options" />
+      </div>
+    </div>
     <div class="schedule-grid">
       <div v-for="item in activeItems" :key="item.id" class="schedule-row">
         <div class="schedule-color" :class="{ yellow: hasScheduleTag(item, 'Fun'), red: hasScheduleTag(item, 'Logistics'), green: hasScheduleTag(item, 'Workshops'), purple: hasScheduleTag(item, 'Meals') }">
@@ -65,10 +74,29 @@ export default {
         options: [
           {text: "All", value: "all"},
           {text: "Workshops", value: 'Workshops'},
-          {text: "Fun", value: 'Fun'},
+          {text: "Activities", value: 'Fun'},
           {text: "Logistics", value: "Logistics"},
           {text: "Food", value: "Meals"}
         ]
+      },
+      date: {
+        selected: "",
+        options: [
+          {text: "Feb 9", value: "9"},
+          {text: "Feb 10", value: '10'}
+        ]
+      }
+    }
+  },
+  watch: {
+    'selector.selected': function(val) {
+      if(val === 'all') {
+        this.date.selected = ''
+      }
+    },
+    'date.selected': function(val) {
+      if(this.selector.selected === 'all' && val !== '') {
+        this.selector.selected = ''
       }
     }
   },
@@ -77,7 +105,16 @@ export default {
       if(this.selector.selected == "all") {
         return this.schedule;
       }
-      return this.schedule.filter(el => this.hasScheduleTag(el, this.selector.selected));
+      let tags = this.schedule;
+      if(this.selector.selected !== '') {
+        tags = tags.filter(el => this.hasScheduleTag(el, this.selector.selected))
+      }
+      if(this.date.selected === '') {
+        return tags;
+      }
+      else {
+        return tags.filter(el => el.startTime.getUTCDate() == this.date.selected);
+      }
     }
   },
   methods: {
@@ -105,7 +142,7 @@ export default {
   display: block;
   padding-left: 0;
   padding-right: 0;
-  max-height: 500px;
+  height: 100%;
   overflow-y: scroll;
 }
 .schedule-color {
@@ -126,7 +163,7 @@ export default {
   }
 }
 .schedule-time {
-  padding: 15px;
+  padding: 10px;
   flex-shrink: 0;
   flex-basis: 12rem;
   background-color: white;
@@ -136,7 +173,7 @@ export default {
   flex-basis: 15em;
   padding-left: 1rem;
   flex-shrink: 0;
-  @media (max-width: 840px) {
+  @media (max-width: 892px) {
     flex-basis: 12em;
   }
 }
@@ -164,7 +201,83 @@ export default {
     background-color: #409887;
   }
 }
-#categories .btn-outline-primary {
-  box-shadow: none;
+.selectors {
+  flex-wrap: wrap;
+}
+#categories, #date { 
+  label.btn {
+    color: #053848;
+    border-width: 2px;
+    padding-left: 2.25em;
+    padding-right: 2.25em;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    &:hover, &.active {
+      color: white;
+      background-color: #007ba0;
+    }
+    border-color: #007ba0;
+  }
+  .btn-outline-primary {
+    box-shadow: none;
+  }
+}
+#categories {
+  flex-wrap: wrap;
+  border-radius: 5px;
+  label.btn {
+    &:nth-child(4) {
+      &.active, &:hover {
+        background-color: #c15a5a;
+      }
+      border-color: #c15a5a;
+    }
+    &:nth-child(3) {
+      &.active, &:hover {
+        background-color: #d6a83f;
+      }
+      border-color: #d6a83f;
+    }
+    &:nth-child(5) {
+      &.active, &:hover {
+        background-color: #8d73d3;
+      }
+      border-color: #8d73d3;
+    }
+    &:nth-child(2) {
+      &.active, &:hover {
+        background-color: #409887;
+      }
+      border-color: #409887;
+    }
+    &:not(:first-child) {
+      margin-left: 3px;
+    }
+    &:not(:last-child) {
+      margin-right: 3px;
+    }
+  }
+  .btn-outline-primary {
+    box-shadow: none;
+  }
+  & > .btn:not(:last-child):not(.dropdown-toggle), & > .btn-group:not(:last-child) > .btn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  & > .btn:not(:first-child), & > .btn-group:not(:first-child) > .btn {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+}
+
+.main-content {
+  height: 100%;
+}
+
+.header {
+  padding-bottom: 1rem;
+  box-shadow: 0px 5px 5px -5px grey;
 }
 </style>

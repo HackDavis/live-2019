@@ -28,7 +28,7 @@ export default {
   data() {
     let closed = false;
     if (typeof window !== 'undefined') {
-      if(window.innerWidth <= 576) {
+      if(window.innerWidth <= 768) {
         closed = true
       }
     }
@@ -106,9 +106,10 @@ html {
 .sidebar-left {
   background-color: #053848;
   padding: 2rem;
-  min-width: 250px;
+  min-width: 265px;
   flex-basis: 20%;
   max-width: 20%;
+  min-height: calc(100vh - #{$top-nav-height});
   transform: translateX(0);
   &.hidden {
     transform: translateX(-100%);
@@ -139,16 +140,19 @@ html {
   transform: translateX(0);
   transition: transform ease-in-out 0.25s;
   box-shadow: 0px 3px 5px grey;
-  height: 100vh;
+  height: calc(100vh - #{$top-nav-height});
   @media(max-width: 768px) {
     position: absolute;
     right: 0;
     z-index: 3;
+    padding: 1rem;
   }
 }
 
 .main {
   padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: calc(100vh - #{$top-nav-height});
   @media(min-width: 576px){
     .main {
       padding: 2rem;

@@ -1,38 +1,38 @@
 <template>
-  <div class="d-flex justify-content-center">
-    <div class="d-flex flex-column sidebar-content">
-      <Countdown />
-      <button class="btn btn-light submit-button">
-        Devpost
-      </button>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <nuxt-link :active-class="'active'" exact class="nav-link" to="/">
-            Schedule
-          </nuxt-link>
-        </li>
-        <li class="nav-item">
-          <nuxt-link :active-class="'active'" exact class="nav-link" to="/map">
-            Map
-          </nuxt-link>
-        </li>
-        <li class="nav-item">
-          <nuxt-link :active-class="'active'" exact class="nav-link" to="/prizes">
-            APIs &amp; Prizes
-          </nuxt-link>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://help.hackdavis.io/">
-            Mentors
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://hardware.mlh.io/">
-            Hardware
-          </a>
-        </li>
-      </ul>
-    </div>
+  <div class="d-flex flex-column sidebar-content">
+    <Countdown />
+      <a href="https://hackdavis2019.devpost.com/">
+        <button class="btn btn-light submit-button" type="button">
+          Devpost
+        </button>
+      </a>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <nuxt-link :active-class="'active'" exact class="nav-link" to="/">
+          Schedule
+        </nuxt-link>
+      </li>
+      <li class="nav-item">
+        <nuxt-link :active-class="'active'" exact class="nav-link" to="/map">
+          Map
+        </nuxt-link>
+      </li>
+      <li class="nav-item">
+        <nuxt-link :active-class="'active'" exact class="nav-link" to="/prizes">
+          APIs &amp; Prizes
+        </nuxt-link>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://help.hackdavis.io/">
+          Mentors
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://hardware.mlh.io/">
+          Hardware
+        </a>
+      </li>
+    </ul>
   </div>
 </template>
 <script>
@@ -47,8 +47,8 @@ export default {
 
 <style lang="scss">
 .sidebar-content {
-  height: 100vh;
   min-width: 200px;
+  flex-shrink: 0;
 }
 .sidebar-content .nav-link {
   color: #c6c6c6;
