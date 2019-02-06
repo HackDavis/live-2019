@@ -23,7 +23,7 @@
         <div class="schedule-color">
 
         </div>
-        <div class="schedule-time font-weight-bold">
+        <div class="schedule-time font-weight-bold d-flex flex-column justify-content-center">
           {{ timeToString(item.startTime) }} - {{ timeToString(item.endTime) }}
         </div>
         <div class="schedule-name font-weight-bold d-flex flex-column justify-content-center">
@@ -93,6 +93,8 @@ export default {
 .schedule-color {
   width: 0.5rem;
   background-color: burlywood;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 .schedule-row {
   display: flex;
@@ -102,6 +104,9 @@ export default {
   margin-top: 1rem;
   background-color: #f5f5f5;
   overflow: auto;
+  @media (max-width: 716px) {
+    flex-wrap: wrap;
+  }
 }
 .schedule-time {
   padding: 15px;
@@ -113,8 +118,19 @@ export default {
 .schedule-name {
   flex-basis: 15em;
   padding-left: 1rem;
+  flex-shrink: 0;
+  @media (max-width: 840px) {
+    flex-basis: 12em;
+  }
 }
 .schedule-description {
   flex-grow: 1;
+  padding-left: 1rem;
+  word-wrap: break-word;
+  padding: 0.5rem;
+  @media (max-width: 716px) {
+    padding: 1rem;
+    border-top: 1px solid #053848;
+  }
 }
 </style>

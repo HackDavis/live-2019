@@ -9,7 +9,7 @@
       </button>
     </div>
     <div class="row">
-        <div class="col-3 sidebar-left" :class="{hidden: closed}" id="nav_collapse">
+        <div class="col-3 sidebar-left" :class="{hidden: closed, show: wasClosed}" id="nav_collapse">
           <side-bar />
         </div>
       <div class="col main">
@@ -34,6 +34,8 @@ export default {
     }
     return {
       closed: closed,
+      wasClosed: !closed, /* used to toggle show class, which toggles the open/close animation
+                             false if it starts closed */
       closeTwitter: true
     }
   },
@@ -44,6 +46,7 @@ export default {
   methods: {
     toggleClosed() {
       this.closed = !this.closed;
+      this.wasClosed = true; // want animation whenever a button is clicked
     }
   }
 }
@@ -106,13 +109,15 @@ html {
   min-width: 250px;
   flex-basis: 20%;
   max-width: 20%;
+  transform: translateX(0);
   &.hidden {
     transform: translateX(-100%);
     position: absolute;
     z-index: 3;
   }
-  transform: translateX(0);
-  transition: transform ease-in-out 0.2s;
+  &.show {
+    transition: transform ease-in-out 0.2s;
+  }
   @media(max-width: 768px) {
     position: absolute;
     z-index: 3;
@@ -143,8 +148,15 @@ html {
 }
 
 .main {
-  padding: 2rem;
+  padding-top: 1rem;
+  @media(min-width: 576px){
+    .main {
+      padding: 2rem;
+    }
+  }
 }
+
+
 
 .top-nav {
   height: $top-nav-height;
@@ -169,7 +181,7 @@ html {
 
 body {
   font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
   color: #053848;
 }
 </style>
