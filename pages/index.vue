@@ -44,9 +44,9 @@ async function getSchedule($axios) {
       headers: {
         'X-Parse-Application-Id': 'hackdavis2019'
       },
-      params: {
+      /*params: {
         include: 'tags'
-      }
+      }*/
     }
   )
   return {
@@ -59,7 +59,7 @@ async function getSchedule($axios) {
         description: item.description,
         tags: item.tags
       }
-    })
+    }).sort((first, second) => first.startTime - second.startTime)
   }
 }
 export default {
@@ -128,7 +128,7 @@ export default {
       return hours + ':' + minutes + ' ' + ampm;
     },
     findScheduleTag(item, tag) {
-      return item.tags.find(el => el.name == tag);
+      return item.tags.find(el => el == tag);
     },
     hasScheduleTag(item, tag) {
       return typeof this.findScheduleTag(item, tag) !== 'undefined'

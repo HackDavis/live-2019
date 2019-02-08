@@ -23,12 +23,12 @@
         </nuxt-link>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://help.hackdavis.io/">
+        <a class="nav-link" target="_blank" href="https://help.hackdavis.io/">
           Mentors
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://hardware.mlh.io/">
+        <a class="nav-link" target="_blank" href="https://hardware.mlh.io/">
           Hardware
         </a>
       </li>
