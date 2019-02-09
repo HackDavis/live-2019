@@ -17,11 +17,11 @@
           Map
         </nuxt-link>
       </li>
-      <!-- <li class="nav-item">
-        <nuxt-link :active-class="'active'" exact class="nav-link" to="/prizes">
+      <li class="nav-item">
+        <a class="nav-link" target="_blank" href="https://hackdavis2019.devpost.com/">
           APIs &amp; Prizes
-        </nuxt-link>
-      </li> -->
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" target="_blank" href="https://help.hackdavis.io/">
           Mentors
