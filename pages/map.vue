@@ -17,7 +17,9 @@
           </div>
         </div>
       </div>
-      <div class="col" />
+      <div class="col">
+        
+      </div>
     </div>
   </section>
 </template>

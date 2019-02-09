@@ -12,7 +12,7 @@
           Schedule
         </nuxt-link>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <nuxt-link :active-class="'active'" exact class="nav-link" to="/map">
           Map
         </nuxt-link>
@@ -21,7 +21,7 @@
         <nuxt-link :active-class="'active'" exact class="nav-link" to="/prizes">
           APIs &amp; Prizes
         </nuxt-link>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a class="nav-link" target="_blank" href="https://help.hackdavis.io/">
           Mentors
