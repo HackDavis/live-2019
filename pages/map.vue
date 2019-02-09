@@ -19,9 +19,9 @@
       </div>
       <div class="col">
         <div class="d-flex flex-column">
-          <h1 class="subtitle">1st Floor</h1>
+          <h1 class="subtitle">Lower Level</h1>
           <img class="map" src="/Map_1_2.png" />
-          <h1 class="subtitle">2nd Floor</h1>
+          <h1 class="subtitle">Upper Level</h1>
           <img class="map" src="/Map_3.png" />
         </div>
       </div>
