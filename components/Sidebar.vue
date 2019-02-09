@@ -28,7 +28,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" target="_blank" href="https://hardware.mlh.io/">
+        <a class="nav-link" target="_blank" href="https://hack.mlh.io/hardware">
           Hardware
         </a>
       </li>

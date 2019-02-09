@@ -67,6 +67,11 @@ export default {
     const result = await getSchedule($axios)
     return result
   },
+  created() {
+    getSchedule(this.$axios).then((value) => {
+      this.schedule = value.schedule;
+    });
+  },
   data () {
     return {
       selector: {
