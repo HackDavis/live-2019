@@ -38,19 +38,27 @@
 
 
 async function getSchedule($axios) {
-  const response = await $axios.$get(
+  /* const response = await $axios.$get(
     'https://hackdavisapp.herokuapp.com/parse/classes/Schedule',
     {
       headers: {
         'X-Parse-Application-Id': 'hackdavis2019'
       },
-      /*params: {
+      params: {
         include: 'tags'
-      }*/
+      }
     }
-  )
+  ) */
   return {
-    schedule: response.results.map(item => {
+    schedule: [{
+    	id: 123,
+    	name: "Our first event",
+    	startTime: new Date("2006:04:05T12-00-00"),
+    	endTime: new Date("2006:04:05T12-00-00"),
+    	description: "test",
+    	tags: ["Meals"],
+    }]
+    /*.map(item => {
       return {
         id: item.objectId,
         name: item.name,
@@ -59,7 +67,8 @@ async function getSchedule($axios) {
         description: item.description,
         tags: item.tags
       }
-    }).sort((first, second) => first.startTime - second.startTime)
+    })*/
+    .sort((first, second) => first.startTime - second.startTime)
   }
 }
 export default {
