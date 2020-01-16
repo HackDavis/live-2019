@@ -7,14 +7,14 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: "HackDavis Live 2019",
+    title: "HackDavis Live 2020",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/favicon-196.png' },
+      { rel: 'icon', type: 'image/png', href: 'https://hackdavis.io/assets/img/icons/favicon-196x196.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700' }
     ]
   },

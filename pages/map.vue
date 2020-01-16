@@ -2,27 +2,9 @@
   <section class="container-fluid bound">
     <h3 class="title font-weight-bold">Map</h3>
     <div class="row">
-      <div class="col-lg-3 legend">
-        <div class="card">
-          <div class="card-header">
-            <p class="card-title font-weight-bold">
-              AREA KEY
-            </p>
-          </div>
-          <div class="card-body">
-            <h5 class="font-weight-bold purple">Food and Drinks</h5>
-            <h5 class="font-weight-bold green">Workshops</h5>
-            <h5 class="font-weight-bold yellow">Ping Pong</h5>
-            <h5 class="font-weight-bold yellow">Badminton</h5>
-          </div>
-        </div>
-      </div>
       <div class="col">
         <div class="d-flex flex-column">
-          <h1 class="subtitle">Lower Level</h1>
-          <img class="map" src="/Map_1_2.png" />
-          <h1 class="subtitle">Upper Level</h1>
-          <img class="map" src="/Map_3.png" />
+          <img class="map" src="https://hackdavis.io/assets/data/map.png" />
         </div>
       </div>
     </div>

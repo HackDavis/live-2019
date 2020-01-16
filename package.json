@@ -2,7 +2,7 @@
   "name": "live-2019",
   "version": "1.0.0",
   "description": "HackDavis Live Site",
-  "author": "Kaelan Mikowicz",
+  "author": "Kaelan Mikowicz / HackDavis Team",
   "private": true,
   "scripts": {
     "dev": "nuxt",

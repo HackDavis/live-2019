@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column sidebar-content">
     <Countdown />
-      <a href="https://hackdavis2019.devpost.com/">
+      <a href="https://hackdavis2020.devpost.com/">
         <button class="btn btn-light submit-button" type="button">
           Submit on Devpost
         </button>
@@ -18,7 +18,7 @@
         </nuxt-link>
       </li>
       <li class="nav-item">
-        <a class="nav-link" target="_blank" href="https://hackdavis2019.devpost.com/">
+        <a class="nav-link" target="_blank" href="https://hackdavis2020.devpost.com/">
           APIs &amp; Prizes
         </a>
       </li>

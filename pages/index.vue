@@ -36,39 +36,31 @@
 
 <script>
 
+let OBJECT_ID = 1;
 
 async function getSchedule($axios) {
-  /* const response = await $axios.$get(
-    'https://hackdavisapp.herokuapp.com/parse/classes/Schedule',
+  const response = await $axios.$get(
+    'https://hackdavis.io/assets/data/live_site_schedule.json',
     {
-      headers: {
-        'X-Parse-Application-Id': 'hackdavis2019'
+      /*headers: {
+        'X-Parse-Application-Id': 'hackdavis',
       },
       params: {
         include: 'tags'
-      }
+      }*/
     }
-  ) */
+  )
   return {
-    schedule: [{
-    	id: 123,
-    	name: "Our first event",
-    	startTime: new Date("2006:04:05T12-00-00"),
-    	endTime: new Date("2006:04:05T12-00-00"),
-    	description: "test",
-    	tags: ["Meals"],
-    }]
-    /*.map(item => {
+    schedule: response.data.map(item => {
       return {
-        id: item.objectId,
+        id: OBJECT_ID++,
         name: item.name,
-        startTime: new Date(item.startTime.iso),
-        endTime: new Date(item.endTime.iso),
+        startTime: new Date(item.startTime),
+        endTime: new Date(item.endTime),
         description: item.description,
         tags: item.tags
       }
-    })*/
-    .sort((first, second) => first.startTime - second.startTime)
+    }).sort((first, second) => first.startTime - second.startTime)
   }
 }
 export default {
@@ -96,8 +88,8 @@ export default {
       date: {
         selected: "",
         options: [
-          {text: "Feb 9", value: "9"},
-          {text: "Feb 10", value: '10'}
+          {text: "Jan 18", value: "18"},
+          {text: "Jan 19", value: '19'}
         ]
       }
     }
@@ -133,8 +125,8 @@ export default {
   },
   methods: {
     timeToString(date) {
-      var hours = date.getUTCHours();
-      var minutes = date.getUTCMinutes();
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
       var ampm = hours >= 12 ? 'PM' : 'AM';
       hours = hours % 12;
       hours = hours ? hours : 12; // the hour '0' should be '12'
@@ -142,10 +134,12 @@ export default {
       return hours + ':' + minutes + ' ' + ampm;
     },
     findScheduleTag(item, tag) {
-      return item.tags.find(el => el == tag);
+      //return item.tags.find(el => el == tag); // TODO: fix this
+      return true
     },
     hasScheduleTag(item, tag) {
-      return typeof this.findScheduleTag(item, tag) !== 'undefined'
+      //return typeof this.findScheduleTag(item, tag) !== 'undefined' // TODO: fix this
+      return true
     }
   }
 }

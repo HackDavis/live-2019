@@ -14,11 +14,13 @@
 
 <script>
 import CountdownSVG from '@/assets/countdown.svg'
-const hackathonEnd = new Date(2019, 1, 10, 12, 0, 0)
+// Why is this hardcoded? TODO: Read it from the schedule, no time to do now - Ben
+const hackathonEnd = new Date("Sun, 19 Jan 2020 13:00:00 PST")
 
 export default {
   data() {
-    const delta = this.getTimeDelta()
+    let delta = this.getTimeDelta()
+    if (delta < 0) {delta = 0;}
     return {
       hours: Math.floor(delta / (1000 * 60 * 60)),
       minutes: Math.floor(delta / 60000) % 60,
