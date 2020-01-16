@@ -28,9 +28,9 @@
         </div>
         <div class="schedule-name font-weight-bold d-flex flex-column justify-content-center">
           {{ item.name }}
-        </div>
-        <div class="schedule-description d-flex flex-column justify-content-center">
-          {{ item.description }}
+            <div class="schedule-description d-flex flex-column justify-content-center">
+            {{ item.description }}
+            </div>
         </div>
       </div>
     </div>
@@ -90,13 +90,11 @@ export default {
   },
   watch: {
     'selector.selected': function(val) {
-        console.log('selector selected' + val)
       if(val === 'All') {
         this.date.selected = ''
       }
     },
     'date.selected': function(val) {
-        console.log('date selected' + val)
       if(this.selector.selected === 'All' && val !== '') {
         this.selector.selected = ''
       }
@@ -173,6 +171,7 @@ export default {
   }
 }
 .schedule-day {
+    text-align: center;
   padding: 10px;
   padding-left: 1rem;
   flex-shrink: 0;
@@ -184,21 +183,19 @@ export default {
   padding: 10px;
   flex-shrink: 0;
   flex-basis: 12rem;
+    text-align: center;
   background-color: white;
   border-right: 1px solid #707070;
 }
 .schedule-name {
-  flex-basis: 15em;
+  flex-basis: 50%;
   padding-left: 1rem;
   flex-shrink: 0;
   @media (max-width: 892px) {
-    flex-basis: 12em;
+    flex-basis: 100%;
   }
 }
 .schedule-description {
-  padding-left: 1rem;
-  word-wrap: break-word;
-  padding: 0.5rem;
   font-weight: 300;
   @media (max-width: 716px) {
     padding: 1rem;
