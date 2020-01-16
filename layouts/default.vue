@@ -172,6 +172,7 @@ html {
 
 .btn-twitter {
   font-size: 20px;
+  margin-right: 10px;
   color: #053848;
   &:focus {
     box-shadow: none;

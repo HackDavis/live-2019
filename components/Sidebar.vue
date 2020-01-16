@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column sidebar-content">
     <Countdown />
-      <a href="https://hackdavis2020.devpost.com/">
+      <a target="_blank" href="https://hackdavis2020.devpost.com/">
         <button class="btn btn-light submit-button" type="button">
           Submit on Devpost
         </button>

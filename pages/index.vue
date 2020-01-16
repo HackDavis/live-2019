@@ -17,16 +17,19 @@
     </div>
     <div class="schedule-grid">
       <div v-for="item in activeItems" :key="item.id" class="schedule-row">
-        <div class="schedule-color" :class="{ yellow: hasScheduleTag(item, 'Fun'), red: hasScheduleTag(item, 'Logistics'), green: hasScheduleTag(item, 'Workshops'), purple: hasScheduleTag(item, 'Meals') }">
+        <div class="schedule-color" :class="{ yellow: hasScheduleTag(item, 'Activities'), red: hasScheduleTag(item, 'Logistics'), green: hasScheduleTag(item, 'Workshops'), purple: hasScheduleTag(item, 'Meals') }">
 
         </div>
+        <div class="schedule-day font-weight-bold d-flex flex-column justify-content-center">
+          {{ timeToDay(item.startTime) }}
+        </div>
         <div class="schedule-time font-weight-bold d-flex flex-column justify-content-center">
-          {{ timeToString(item.startTime) }} - {{ timeToString(item.endTime) }}
+          {{ timeToString(item.startTime) }} - {{ timeToString(item.endTime, true) }}
         </div>
         <div class="schedule-name font-weight-bold d-flex flex-column justify-content-center">
           {{ item.name }}
         </div>
-        <div class="schedule-description font-weight-light d-flex flex-column justify-content-center">
+        <div class="schedule-description d-flex flex-column justify-content-center">
           {{ item.description }}
         </div>
       </div>
@@ -76,11 +79,11 @@ export default {
   data () {
     return {
       selector: {
-        selected: "all",
+        selected: "All",
         options: [
-          {text: "All", value: "all"},
+          {text: "All", value: "All"},
           {text: "Workshops", value: 'Workshops'},
-          {text: "Activities", value: 'Fun'},
+          {text: "Activities", value: 'Activities'},
           {text: "Logistics", value: "Logistics"},
           {text: "Food", value: "Meals"}
         ]
@@ -88,27 +91,29 @@ export default {
       date: {
         selected: "",
         options: [
-          {text: "Jan 18", value: "18"},
-          {text: "Jan 19", value: '19'}
+          {text: "Saturday", value: "18"},
+          {text: "Sunday", value: '19'}
         ]
       }
     }
   },
   watch: {
     'selector.selected': function(val) {
-      if(val === 'all') {
+        console.log('selector selected' + val)
+      if(val === 'All') {
         this.date.selected = ''
       }
     },
     'date.selected': function(val) {
-      if(this.selector.selected === 'all' && val !== '') {
+        console.log('date selected' + val)
+      if(this.selector.selected === 'All' && val !== '') {
         this.selector.selected = ''
       }
     }
   },
   computed: {
     activeItems() {
-      if(this.selector.selected == "all") {
+      if(this.selector.selected == "All") {
         return this.schedule;
       }
       let tags = this.schedule;
@@ -133,13 +138,14 @@ export default {
       minutes = minutes < 10 ? '0'+minutes : minutes;
       return hours + ':' + minutes + ' ' + ampm;
     },
+    timeToDay(date) {
+      return date.toLocaleDateString("en-us", { weekday: 'long' });
+    },
     findScheduleTag(item, tag) {
-      //return item.tags.find(el => el == tag); // TODO: fix this
-      return true
+      return item.tags.find(el => el == tag);
     },
     hasScheduleTag(item, tag) {
-      //return typeof this.findScheduleTag(item, tag) !== 'undefined' // TODO: fix this
-      return true
+      return typeof this.findScheduleTag(item, tag) !== 'undefined';
     }
   }
 }
@@ -155,10 +161,15 @@ export default {
 }
 .schedule-color {
   width: 0.5rem;
+  height: 100%;
   flex-shrink: 0;
   flex-grow: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .schedule-row {
+    position: relative;
   display: flex;
   align-items: stretch;
   border-radius: 5px;
@@ -169,6 +180,13 @@ export default {
   @media (max-width: 716px) {
     flex-wrap: wrap;
   }
+}
+.schedule-day {
+  padding: 10px;
+  flex-shrink: 0;
+  flex-basis: 7rem;
+  background-color: white;
+  border-right: 1px solid #707070;
 }
 .schedule-time {
   padding: 10px;
@@ -186,10 +204,10 @@ export default {
   }
 }
 .schedule-description {
-  flex-grow: 1;
   padding-left: 1rem;
   word-wrap: break-word;
   padding: 0.5rem;
+  font-weight: 300;
   @media (max-width: 716px) {
     padding: 1rem;
     border-top: 1px solid #053848;
@@ -282,6 +300,7 @@ export default {
 
 .main-content {
   height: 100%;
+  overflow: hidden;
 }
 
 .header {
