@@ -42,29 +42,20 @@
 let OBJECT_ID = 1;
 
 async function getSchedule($axios) {
-  const response = await $axios.$get(
-    'https://hackdavis.io/assets/data/live_site_schedule.json',
-    {
-      /*headers: {
-        'X-Parse-Application-Id': 'hackdavis',
-      },
-      params: {
-        include: 'tags'
-      }*/
+
+    const response = require("static/live_site_schedule.json")
+    return {
+        schedule: response.data.map(item => {
+        return {
+            id: OBJECT_ID++,
+            name: item.name,
+            startTime: new Date(item.startTime),
+            endTime: new Date(item.endTime),
+            description: item.description,
+            tags: item.tags
+        }
+        }).sort((first, second) => first.startTime - second.startTime)
     }
-  )
-  return {
-    schedule: response.data.map(item => {
-      return {
-        id: OBJECT_ID++,
-        name: item.name,
-        startTime: new Date(item.startTime),
-        endTime: new Date(item.endTime),
-        description: item.description,
-        tags: item.tags
-      }
-    }).sort((first, second) => first.startTime - second.startTime)
-  }
 }
 export default {
   async asyncData({ $axios }) {
@@ -183,6 +174,7 @@ export default {
 }
 .schedule-day {
   padding: 10px;
+  padding-left: 1rem;
   flex-shrink: 0;
   flex-basis: 7rem;
   background-color: white;
