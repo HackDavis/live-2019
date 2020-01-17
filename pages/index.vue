@@ -20,13 +20,13 @@
         <div class="schedule-color" :class="{ yellow: hasScheduleTag(item, 'Activities'), red: hasScheduleTag(item, 'Logistics'), green: hasScheduleTag(item, 'Workshops'), purple: hasScheduleTag(item, 'Meals') }">
 
         </div>
-        <div class="schedule-day font-weight-bold d-flex flex-column justify-content-center">
+        <div class="schedule-day d-flex flex-column justify-content-center">
           {{ timeToDay(item.startTime) }}
         </div>
-        <div class="schedule-time font-weight-bold d-flex flex-column justify-content-center">
+        <div class="schedule-time d-flex flex-column justify-content-center">
           {{ timeToString(item.startTime) }} - {{ timeToString(item.endTime, true) }}
         </div>
-        <div class="schedule-name font-weight-bold d-flex flex-column justify-content-center">
+        <div class="schedule-name d-flex flex-column justify-content-center">
           {{ item.name }}
             <div class="flex-column justify-content-center schedule-description">
             {{ item.description }}
@@ -161,6 +161,7 @@ export default {
     position: relative;
   display: flex;
   align-items: stretch;
+  font-family: 'Avenir';
   border-radius: 5px;
   border: solid 1px #707070;
   margin-top: 1rem;
@@ -205,6 +206,7 @@ export default {
 .schedule-description {
     display: none;
   font-weight: 300;
+  font-family: 'Avenir Next';
   transition: 0.2s ease-in-out all;
   @media (max-width: 716px) {
     padding: 1rem;
@@ -235,6 +237,7 @@ export default {
 #categories, #date { 
   label.btn {
     color: white;
+    font-weight: 500;
     border-width: 2px;
     padding-left: 2.25em;
     padding-right: 2.25em;
