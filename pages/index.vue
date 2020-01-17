@@ -225,7 +225,7 @@ export default {
     background-color: #EBB332;
   }
   &.purple {
-    background-color: #422BE9;
+    background-color: #5847E0;
   }
   &.green {
     background-color: #5EC0F3;
@@ -273,9 +273,9 @@ export default {
     }
     &:nth-child(5) {
       &.active, &:hover {
-        background-color: #422BE9;
+        background-color: #5847E0;
       }
-      border-color: #422BE9;
+      border-color: #5847E0;
     }
     &:nth-child(2) {
       &.active, &:hover {

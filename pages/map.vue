@@ -28,7 +28,7 @@
     color: #CA406E;
   }
   .purple {
-    color: #422BE9;
+    color: #5847E0;
   }
   .yellow {
     color: #EBB332;
