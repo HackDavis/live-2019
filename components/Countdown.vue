@@ -1,6 +1,7 @@
 <template>
   <div class="countdown-container">
     <div class="d-flex flex-column justify-content-center align-items-center time">
+      <div class='countdown-logo'></div>
       <h1>{{hours}}</h1>
       <p>hrs</p>
       <h1>{{minutes}}</h1>
@@ -55,6 +56,15 @@ export default {
 <style lang="scss">
 .countdown-container {
   position: relative;
+}
+div.countdown-logo
+{
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1.5rem;
+    background-image: url("https://hackdavis.io/assets/img/icons/favicon-196x196.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .time {
   position: absolute;
