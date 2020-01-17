@@ -15,7 +15,13 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: 'https://hackdavis.io/assets/img/icons/favicon-196x196.png' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700' }
+      { rel: 'stylesheet', href: 'avenir_next.css' }
+    ],
+    script: [
+      {
+        src: "https://code.jquery.com/jquery-3.3.1.slim.min.js",
+        type: "text/javascript"
+      }
     ]
   },
 

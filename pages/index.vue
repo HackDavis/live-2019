@@ -28,7 +28,7 @@
         </div>
         <div class="schedule-name font-weight-bold d-flex flex-column justify-content-center">
           {{ item.name }}
-            <div class="schedule-description d-flex flex-column justify-content-center">
+            <div class="flex-column justify-content-center schedule-description">
             {{ item.description }}
             </div>
         </div>
@@ -164,11 +164,15 @@ export default {
   border-radius: 5px;
   border: solid 1px #707070;
   margin-top: 1rem;
-  background-color: #f5f5f5;
   overflow: auto;
   @media (max-width: 716px) {
     flex-wrap: wrap;
   }
+  transition: 0.2s ease-in-out background-color;
+}
+.schedule-row:hover
+{
+    background: rgba(255, 255, 255, 0.1);
 }
 .schedule-day {
     text-align: center;
@@ -176,7 +180,6 @@ export default {
   padding-left: 1rem;
   flex-shrink: 0;
   flex-basis: 7rem;
-  background-color: white;
   border-right: 1px solid #707070;
 }
 .schedule-time {
@@ -184,36 +187,46 @@ export default {
   flex-shrink: 0;
   flex-basis: 12rem;
     text-align: center;
-  background-color: white;
   border-right: 1px solid #707070;
 }
 .schedule-name {
   flex-basis: 50%;
   padding-left: 1rem;
   flex-shrink: 0;
+  transition: 0.2s ease-in-out text-decoration;
   @media (max-width: 892px) {
     flex-basis: 100%;
   }
 }
+.schedule-name:hover
+{
+    cursor: pointer;
+}
 .schedule-description {
+    display: none;
   font-weight: 300;
+  transition: 0.2s ease-in-out all;
   @media (max-width: 716px) {
     padding: 1rem;
     border-top: 1px solid #053848;
   }
 }
+.schedule-name:hover .schedule-description
+{
+    display: block;
+}
 .schedule-color {
   &.red {
-    background-color: #c15a5a;
+    background-color: #CA406E;
   }
   &.yellow {
-    background-color: #d6a83f;
+    background-color: #EBB332;
   }
   &.purple {
-    background-color: #8d73d3;
+    background-color: #422BE9;
   }
   &.green {
-    background-color: #409887;
+    background-color: #5EC0F3;
   }
 }
 .selectors {
@@ -221,7 +234,7 @@ export default {
 }
 #categories, #date { 
   label.btn {
-    color: #053848;
+    color: white;
     border-width: 2px;
     padding-left: 2.25em;
     padding-right: 2.25em;
@@ -230,10 +243,10 @@ export default {
     margin-top: 2.5px;
     margin-bottom: 2.5px;
     &:hover, &.active {
-      color: white;
-      background-color: #007ba0;
+      color: black;
+      background-color: white;
     }
-    border-color: #007ba0;
+    border-color: white;
   }
   .btn-outline-primary {
     box-shadow: none;
@@ -245,27 +258,27 @@ export default {
   label.btn {
     &:nth-child(4) {
       &.active, &:hover {
-        background-color: #c15a5a;
+        background-color: #CA406E;
       }
-      border-color: #c15a5a;
+      border-color: #CA406E;
     }
     &:nth-child(3) {
       &.active, &:hover {
-        background-color: #d6a83f;
+        background-color: #EBB332;
       }
-      border-color: #d6a83f;
+      border-color: #EBB332;
     }
     &:nth-child(5) {
       &.active, &:hover {
-        background-color: #8d73d3;
+        background-color: #422BE9;
       }
-      border-color: #8d73d3;
+      border-color: #422BE9;
     }
     &:nth-child(2) {
       &.active, &:hover {
-        background-color: #409887;
+        background-color: #5EC0F3;
       }
-      border-color: #409887;
+      border-color: #5EC0F3;
     }
     &:not(:first-child) {
       margin-left: 3px;

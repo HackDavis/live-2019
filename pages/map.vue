@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col">
         <div class="d-flex flex-column">
-          <img class="map" src="https://hackdavis.io/assets/data/map.png" />
+          <img class="map" src="https://hackdavis.io/assets/data/map_transparent.png" />
         </div>
       </div>
     </div>
@@ -25,16 +25,16 @@
 }
 .card-body {
   .red {
-    color: #c15a5a;
+    color: #CA406E;
   }
   .purple {
-    color: #8d73d3;
+    color: #422BE9;
   }
   .yellow {
-    color: #d6a83f;
+    color: #EBB332;
   }
   .green {
-    color: #409887;
+    color: #5EC0F3;
   }
 }
 .title {

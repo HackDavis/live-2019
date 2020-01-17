@@ -104,7 +104,7 @@ html {
 }
 
 .sidebar-left {
-  background-color: #053848;
+  background-color: #090617;
   padding: 2rem;
   min-width: 265px;
   flex-basis: 20%;
@@ -152,6 +152,7 @@ html {
 .main {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  background-image: linear-gradient(to bottom, #1B0B3E, #101010);
   height: calc(100vh - #{$top-nav-height});
   @media(min-width: 576px){
     .main {
@@ -167,13 +168,14 @@ html {
   box-shadow: 0px 1px 3px grey;
   justify-content: space-between;
   position: relative;
+  background: #090617;
   z-index: 5;
 }
 
 .btn-twitter {
   font-size: 20px;
   margin-right: 10px;
-  color: #053848;
+  color: white;
   &:focus {
     box-shadow: none;
   }
@@ -181,12 +183,12 @@ html {
 
 .top-nav .navbar-toggler {
   border-color: transparent;
-  color: #053848;
+  color: white;
 }
 
 body {
-  font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Avenir Next', Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
-  color: #053848;
+  color: white;
 }
 </style>
