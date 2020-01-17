@@ -1,7 +1,6 @@
 <template>
   <div class="countdown-container">
     <div class="d-flex flex-column justify-content-center align-items-center time">
-      <div class='countdown-logo'></div>
       <h1>{{hours}}</h1>
       <p>hrs</p>
       <h1>{{minutes}}</h1>
