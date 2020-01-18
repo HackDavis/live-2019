@@ -68,7 +68,7 @@
             "description": "",
             "time": "3",
             "type": "event",
-            "startTime": "Sat, 18 Jan 2020 14:00:00 PST",
+            "startTime": "Sat, 18 Jan 2020 15:00:00 PST",
             "tags": ["All", "Activities"]
         },
         {
@@ -259,9 +259,9 @@
         {
             "name": "Game Area closes",
             "description": "",
-            "time": "10",
+            "time": "8:30",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 10:00:00 PST",
+            "startTime": "Sun, 19 Jan 2020 08:30:00 PST",
             "tags": ["All", "Activities"]
         },
         {
