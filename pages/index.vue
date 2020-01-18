@@ -24,7 +24,7 @@
           {{ timeToDay(item.startTime) }}
         </div>
         <div class="schedule-time d-flex flex-column justify-content-center">
-          {{ timeToString(item.startTime) }} - {{ timeToString(item.endTime, true) }}
+          {{ getTimeString(item)  }}
         </div>
         <div class="schedule-name d-flex flex-column justify-content-center">
           {{ item.name }}
@@ -50,7 +50,7 @@ async function getSchedule($axios) {
             id: OBJECT_ID++,
             name: item.name,
             startTime: new Date(item.startTime),
-            endTime: new Date(item.endTime),
+            endTime: item.endTime ? new Date(item.endTime) : null,
             description: item.description,
             tags: item.tags
         }
@@ -119,6 +119,7 @@ export default {
   },
   methods: {
     timeToString(date) {
+        if (date == null) {return ''}
       var hours = date.getHours();
       var minutes = date.getMinutes();
       var ampm = hours >= 12 ? 'PM' : 'AM';
@@ -126,6 +127,10 @@ export default {
       hours = hours ? hours : 12; // the hour '0' should be '12'
       minutes = minutes < 10 ? '0'+minutes : minutes;
       return hours + ':' + minutes + ' ' + ampm;
+    },
+    getTimeString(item) {
+        return item.endTime == null ? this.timeToString(item.startTime) :
+            this.timeToString(item.startTime) + " - " + this.timeToString(item.endTime, true);
     },
     timeToDay(date) {
       return date.toLocaleDateString("en-us", { weekday: 'long' });
