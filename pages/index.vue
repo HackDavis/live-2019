@@ -113,7 +113,7 @@ export default {
         return tags;
       }
       else {
-        return tags.filter(el => el.startTime.getUTCDate() == this.date.selected);
+        return tags.filter(el => el.startTime.getDate() == this.date.selected);
       }
     }
   },
