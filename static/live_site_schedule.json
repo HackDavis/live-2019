@@ -3,7 +3,7 @@
     "endTime": "Sun, 19 Jan 2020 13:00:00 PST",
     "data": [
         {
-            "name": "Check in",
+            "name": "Check-in",
             "description": "",
             "time": "9",
             "type": "event",
@@ -46,14 +46,6 @@
             "tags": ["All", "Activities"]
         },
         {
-            "name": "Lunch",
-            "description": "",
-            "time": "",
-            "type": "event",
-            "startTime": "Sat, 18 Jan 2020 13:00:00 PST",
-            "tags": ["All", "Meals"]
-        },
-        {
             "name": "Meet and Greet NPOs",
             "description": "Ballroom A. Come to hear our wonderful NPOs and hear about the causes they're advocating for. This is a great space in which to find your next project idea.",
             "time": "1:30",
@@ -68,10 +60,10 @@
             "time": "2",
             "type": "event",
             "startTime": "Sat, 18 Jan 2020 14:00:00 PST",
-            "tags": ["All", "Workshops"]
+            "tags": ["All", "Activities"]
         },
         {
-            "name": "Workshop: Leveraging OSIsoft APIs for UC Davis Energy Data by OSIsoft",
+            "name": "Leveraging OSIsoft APIs for UC Davis Energy Data by OSIsoft",
             "description": "Ballroom A",
             "time": "2:30",
             "type": "event",
@@ -80,7 +72,7 @@
             "tags": ["All", "Workshops"]
         },
         {
-            "name": "Workshop: API Development and Testing by Bit Project",
+            "name": "API Development and Testing by Bit Project",
             "description": "Ballroom A",
             "time": "3:30",
             "type": "event",
@@ -89,7 +81,7 @@
             "tags": ["All", "Workshops"]
         },
         {
-            "name": "Workshop: Intro to Rapid Prototyping by Student Startup Center",
+            "name": "Intro to Rapid Prototyping by Student Startup Center",
             "description": "Makerspace",
             "time": "",
             "type": "event",
@@ -98,7 +90,7 @@
             "tags": ["All", "Workshops"]
         },
         {
-            "name": "Workshop: 3 Powerful Google Cloud Products for Your Project by Google Cloud",
+            "name": "Three Powerful Google Cloud Products for Your Project by Google Cloud",
             "description": "Ballroom A",
             "time": "4:30",
             "type": "event",
@@ -107,7 +99,7 @@
             "tags": ["All", "Workshops"]
         },
         {
-            "name": "Workshop: Cybersecurity Prep & Defense: Your Role as Programmers by Centene",
+            "name": "Cybersecurity Prep & Defense: Your Role as Programmers by Centene",
             "description": "Ballroom A",
             "time": "5:30",
             "type": "event",
@@ -124,7 +116,7 @@
             "tags": ["All", "Meals"]
         },
         {
-            "name": "Workshop: Virtual Reality Workshop by Student Startup Center",
+            "name": "Virtual Reality Workshop by Student Startup Center",
             "description": "Makerspace",
             "time": "7:30",
             "type": "event",
@@ -133,7 +125,7 @@
             "tags": ["All", "Workshops"]
         },
         {
-            "name": "Workshop: Intro to Frontend Development with Vue.js by Hao Huang",
+            "name": "Intro to Frontend Development with Vue.js by Hao Huang",
             "description": "Ballroom A",
             "time": "",
             "type": "event",
@@ -142,7 +134,7 @@
             "tags": ["All", "Workshops"]
         },
         {
-            "name": "Workshop: Personal Branding Workshop by #include",
+            "name": "Personal Branding Workshop by #include",
             "description": "Ballroom B",
             "time": "",
             "type": "event",
@@ -169,7 +161,7 @@
             "tags": ["All", "Activities"]
         },
         {
-            "name": "Workshop: Intro to Android Mobile Development by DSC",
+            "name": "Intro to Android Mobile Development by DSC",
             "description": "Ballroom A",
             "time": "",
             "type": "event",
@@ -178,7 +170,7 @@
             "tags": ["All", "Workshops"]
         },
         {
-            "name": "Workshop: Introduction to Unity by Game Dev Club",
+            "name": "Introduction to Unity by Game Dev Club",
             "description": "Ballroom B",
             "time": "",
             "type": "event",
@@ -195,7 +187,7 @@
             "tags": ["All", "Meals"]
         },
         {
-            "name": "Workshop: Machine Learning for Beginners by AI Society",
+            "name": "Machine Learning for Beginners by AI Society",
             "description": "Ballroom A",
             "time": "10",
             "type": "event",
@@ -213,7 +205,7 @@
             "tags": ["All", "Activities"]
         },
         {
-            "name": "Workshop: UX Design for Hackathons by DCSC and WiCS",
+            "name": "UX Design for Hackathons by DCSC and WiCS",
             "description": "Ballroom B",
             "time": "11",
             "type": "event",
@@ -222,7 +214,7 @@
             "tags": ["All", "Workshops"]
         },
         {
-            "name": "Workshop: Intermediate Topics in Machine Learning by AI Society",
+            "name": "Intermediate Topics in Machine Learning by AI Society",
             "description": "Ballroom A",
             "time": "",
             "type": "event",
