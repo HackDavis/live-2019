@@ -38,7 +38,7 @@ export default {
   methods: {
     getTimeDelta() {
       const now = Date.now()
-      return hackathonEnd - now
+      return Math.max(hackathonEnd - now, 0);
     },
     setTime() {
       const delta = this.getTimeDelta()
