@@ -17,7 +17,7 @@
             "time": "",
             "type": "event",
             "startTime": "Sat, 18 Jan 2020 11:00:00 PST",
-            "tags": ["All", "Food"]
+            "tags": ["All", "Meals"]
         },
         {
             "name": "Opening Ceremony",
@@ -51,7 +51,7 @@
             "time": "",
             "type": "event",
             "startTime": "Sat, 18 Jan 2020 13:00:00 PST",
-            "tags": ["All", "Food"]
+            "tags": ["All", "Meals"]
         },
         {
             "name": "Meet and Greet NPOs",
@@ -121,7 +121,7 @@
             "time": "6:30",
             "type": "event",
             "startTime": "Sat, 18 Jan 2020 18:30:00 PST",
-            "tags": ["All", "Food"]
+            "tags": ["All", "Meals"]
         },
         {
             "name": "Workshop: Virtual Reality Workshop by Student Startup Center",
@@ -192,7 +192,7 @@
             "time": "9:30",
             "type": "event",
             "startTime": "Sat, 18 Jan 2020 21:30:00 PST",
-            "tags": ["All", "Food"]
+            "tags": ["All", "Meals"]
         },
         {
             "name": "Workshop: Machine Learning for Beginners by AI Society",
@@ -235,17 +235,16 @@
             "description": "",
             "time": "12",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 09:00:00 PST",
-            "endTime": "Sun, 19 Jan 2020 10:00:00 PST",
-            "tags": ["All", "Food"]
+            "startTime": "Sun, 19 Jan 2020 00:00:00 PST",
+            "tags": ["All", "Meals"]
         },
         {
             "name": "Badminton Tournament",
             "description": "Games Area",
             "time": "1230",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 09:00:00 PST",
-            "endTime": "Sun, 19 Jan 2020 10:00:00 PST",
+            "startTime": "Sun, 19 Jan 2020 00:30:00 PST",
+            "endTime": "Sun, 19 Jan 2020 01:30:00 PST",
             "tags": ["All", "Activities"]
         },
         {
@@ -253,8 +252,8 @@
             "description": "Games Area",
             "time": "1:30",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 09:00:00 PST",
-            "endTime": "Sun, 19 Jan 2020 10:00:00 PST",
+            "startTime": "Sun, 19 Jan 2020 01:30:00 PST",
+            "endTime": "Sun, 19 Jan 2020 02:30:00 PST",
             "tags": ["All", "Activities"]
         },
         {
@@ -262,17 +261,15 @@
             "description": "",
             "time": "8:30",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 09:00:00 PST",
-            "endTime": "Sun, 19 Jan 2020 10:00:00 PST",
-            "tags": ["All", "Food"]
+            "startTime": "Sun, 19 Jan 2020 08:30:00 PST",
+            "tags": ["All", "Meals"]
         },
         {
             "name": "Game Area closes",
             "description": "",
             "time": "10",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 09:00:00 PST",
-            "endTime": "Sun, 19 Jan 2020 10:00:00 PST",
+            "startTime": "Sun, 19 Jan 2020 10:00:00 PST",
             "tags": ["All", "Activities"]
         },
         {
@@ -280,8 +277,7 @@
             "description": "Submit your project on Devpost! You can still continue working till hacking ends.",
             "time": "12",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 09:00:00 PST",
-            "endTime": "Sun, 19 Jan 2020 10:00:00 PST",
+            "startTime": "Sun, 19 Jan 2020 12:00:00 PST",
             "tags": ["All", "Logistics"]
         },
         {
@@ -289,8 +285,7 @@
             "description": "",
             "time": "1",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 09:00:00 PST",
-            "endTime": "Sun, 19 Jan 2020 10:00:00 PST",
+            "startTime": "Sun, 19 Jan 2020 13:00:00 PST",
             "tags": ["All", "Logistics"]
         },
         {
@@ -298,17 +293,16 @@
             "description": "",
             "time": "",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 09:00:00 PST",
-            "endTime": "Sun, 19 Jan 2020 10:00:00 PST",
-            "tags": ["All", "Food"]
+            "startTime": "Sun, 19 Jan 2020 13:00:00 PST",
+            "tags": ["All", "Meals"]
         },
         {
             "name": "Demos and judging",
             "description": "Show off your sweet hack to the judges! Open to the public.",
             "time": "2",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 09:00:00 PST",
-            "endTime": "Sun, 19 Jan 2020 10:00:00 PST",
+            "startTime": "Sun, 19 Jan 2020 14:00:00 PST",
+            "endTime": "Sun, 19 Jan 2020 15:30:00 PST",
             "tags": ["All", "Logistics"]
         },
         {
@@ -316,8 +310,8 @@
             "description": "Closing remarks and awarding of prizes!",
             "time": "4",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 09:00:00 PST",
-            "endTime": "Sun, 19 Jan 2020 10:00:00 PST",
+            "startTime": "Sun, 19 Jan 2020 16:00:00 PST",
+            "endTime": "Sun, 19 Jan 2020 17:00:00 PST",
             "tags": ["All", "Logistics"]
         }
     ]
