@@ -55,14 +55,6 @@
             "tags": ["All", "Activities"]
         },
         {
-            "name": "Game Area opens",
-            "description": "",
-            "time": "2",
-            "type": "event",
-            "startTime": "Sat, 18 Jan 2020 14:00:00 PST",
-            "tags": ["All", "Activities"]
-        },
-        {
             "name": "Leveraging OSIsoft APIs for UC Davis Energy Data by OSIsoft",
             "description": "Ballroom A",
             "time": "2:30",
@@ -70,6 +62,14 @@
             "startTime": "Sat, 18 Jan 2020 14:30:00 PST",
             "endTime": "Sat, 18 Jan 2020 15:30:00 PST",
             "tags": ["All", "Workshops"]
+        },
+        {
+            "name": "Game Area opens",
+            "description": "",
+            "time": "3",
+            "type": "event",
+            "startTime": "Sat, 18 Jan 2020 14:00:00 PST",
+            "tags": ["All", "Activities"]
         },
         {
             "name": "API Development and Testing by Bit Project",
