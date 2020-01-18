@@ -115,6 +115,7 @@ html {
     transform: translateX(-100%);
     position: absolute;
     z-index: 3;
+    display: none;
   }
   &.show {
     transition: transform ease-in-out 0.2s;
