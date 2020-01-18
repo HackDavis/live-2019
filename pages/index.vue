@@ -169,7 +169,7 @@ export default {
   @media (max-width: 716px) {
     flex-wrap: wrap;
   }
-  transition: 0.2s ease-in-out background-color;
+  transition: 0.1s ease-in-out background-color;
 }
 .schedule-row:hover
 {
@@ -199,12 +199,7 @@ export default {
     flex-basis: 100%;
   }
 }
-.schedule-name:hover
-{
-    cursor: pointer;
-}
 .schedule-description {
-    display: none;
   font-weight: 300;
   font-family: 'Avenir Next';
   transition: 0.2s ease-in-out all;
@@ -212,10 +207,6 @@ export default {
     padding: 1rem;
     border-top: 1px solid #053848;
   }
-}
-.schedule-name:hover .schedule-description
-{
-    display: block;
 }
 .schedule-color {
   &.red {

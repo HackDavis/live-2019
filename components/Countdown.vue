@@ -1,7 +1,9 @@
 <template>
   <div class="countdown-container">
     <div class="d-flex flex-column justify-content-center align-items-center time">
-      <div class='countdown'>{{hours}}:{{minutes}}:{{seconds}}</div>
+      <div class='hd-logo'></div>
+      <h1 class='countdown'>{{hours}}:{{minutes}}:{{seconds}}</h1>
+      <h2>Until Hacking Ends</h2>
       <br>
     </div>
   </div>
@@ -16,10 +18,11 @@ export default {
   data() {
     let delta = this.getTimeDelta()
     if (delta < 0) {delta = 0;}
+    const seconds = Math.floor(delta / 1000) % 60;
     return {
       hours: Math.floor(delta / (1000 * 60 * 60)),
       minutes: Math.floor(delta / 60000) % 60,
-      seconds: `${(Math.floor(delta / 1000) % 60) < 10 ? '0' : ''}${Math.floor(delta / 1000) % 60}`
+      seconds: `${seconds < 10 ? '0' : ''}${seconds}`
     }
   },
   components: {
@@ -39,9 +42,12 @@ export default {
     },
     setTime() {
       const delta = this.getTimeDelta()
-      this.hours = Math.floor(delta / (1000 * 60 * 60))
-      this.minutes = Math.floor(delta / 60000) % 60
-      this.seconds = Math.floor(delta / 1000) % 60
+      this.hours = this.formatTime(Math.floor(delta / (1000 * 60 * 60)))
+      this.minutes = this.formatTime(Math.floor(delta / 60000) % 60)
+      this.seconds = this.formatTime(Math.floor(delta / 1000) % 60);
+    },
+    formatTime(time) {
+        return time < 10 ? `0${time}` : time;
     }
   }
 }
@@ -61,19 +67,31 @@ div.countdown-logo
     background-size: 100% 100%;
 }
 .time {
-  position: absolute;
   width: 100%;
   height: calc(100% + 10px);
   div.countdown {
     color: white;
     font-style: bold;
     font-size: 2.5rem;
-    padding: 40px !important;
+    padding: 10px !important;
     margin-bottom: 0;
+  }
+  div.hd-logo
+  {
+      width: 6rem;
+      height: 6rem;
+      background-image: url("https://hackdavis.io/assets/img/icons/favicon-196x196.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      margin: 8px;
   }
   p {
     margin-bottom: 1rem;
     color: #5cbebe;
+  }
+  h2{
+      text-align: center;
+      font-size: 1rem;
   }
 }
 </style>
