@@ -28,12 +28,12 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" target="_blank" href="http://hardware.mlh.io/">
+        <a class="nav-link" target="_blank" href="https://hardware.mlh.io/">
           Hardware
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" target="_blank" href="http://hackdavis2020.slack.com/">
+        <a class="nav-link" target="_blank" href="https://hackdavis2020.slack.com/">
           Slack
         </a>
       </li>
