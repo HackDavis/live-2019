@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col">
         <div class="d-flex flex-column">
-          <img class="map" src="https://hackdavis.io/assets/data/map_transparent.png" />
+          <img class="map" src="https://hackdavis.io/assets/data/map.png" />
         </div>
       </div>
     </div>
