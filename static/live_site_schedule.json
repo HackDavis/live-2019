@@ -2,11 +2,7 @@
     "startTime": "Sat, 18 Jan 2020 13:00:00 PST",
     "endTime": "Sun, 19 Jan 2020 13:00:00 PST",
     "data": [
-        {
-            "name": "Saturday",
-            "type": "day"
-        },
-        {
+       {
             "name": "Check in",
             "description": "",
             "time": "9",
@@ -233,10 +229,6 @@
             "startTime": "Sat, 18 Jan 2020 23:00:00 PST",
             "endTime": "Sun, 19 Jan 2020 00:00:00 PST",
             "tags": ["All", "Workshops"]
-        },
-        {
-            "name": "Sunday",
-            "type": "day"
         },
         {
             "name": "Midnight snack",
