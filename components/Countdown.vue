@@ -1,14 +1,9 @@
 <template>
   <div class="countdown-container">
     <div class="d-flex flex-column justify-content-center align-items-center time">
-      <h1>{{hours}}</h1>
-      <p>hrs</p>
-      <h1>{{minutes}}</h1>
-      <p>mins</p>
-      <h1>{{seconds}}</h1>
-      <p>secs</p>
+      <div class='countdown'>{{hours}}:{{minutes}}:{{seconds}}</div>
+      <br>
     </div>
-    <CountdownSVG />
   </div>
 </template>
 
@@ -24,7 +19,7 @@ export default {
     return {
       hours: Math.floor(delta / (1000 * 60 * 60)),
       minutes: Math.floor(delta / 60000) % 60,
-      seconds: Math.floor(delta / 1000) % 60
+      seconds: `${(Math.floor(delta / 1000) % 60) < 10 ? '0' : ''}${Math.floor(delta / 1000) % 60}`
     }
   },
   components: {
@@ -69,10 +64,11 @@ div.countdown-logo
   position: absolute;
   width: 100%;
   height: calc(100% + 10px);
-  h1 {
+  div.countdown {
     color: white;
     font-style: bold;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    padding: 40px !important;
     margin-bottom: 0;
   }
   p {

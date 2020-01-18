@@ -239,49 +239,61 @@ export default {
     color: white;
     font-weight: 500;
     border-width: 2px;
-    padding-left: 2.25em;
-    padding-right: 2.25em;
+    padding: 0.5em;
+    margin-left: 1.25em !important;
+    margin-right: 1.25em !important;
     flex-grow: 0;
     flex-shrink: 0;
     margin-top: 2.5px;
     margin-bottom: 2.5px;
     &:hover, &.active {
-      color: black;
-      background-color: white;
+        background-color: transparent;
     }
-    border-color: white;
+    border-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
   }
   .btn-outline-primary {
     box-shadow: none;
   }
 }
+
+#date {
+  label.btn {
+      &.active, &:hover {
+        border-color: white;
+      }
+  }
+}
 #categories {
   flex-wrap: wrap;
-  border-radius: 5px;
   label.btn {
     &:nth-child(4) {
       &.active, &:hover {
-        background-color: #CA406E;
+        border-color: #CA406E;
       }
-      border-color: #CA406E;
     }
     &:nth-child(3) {
       &.active, &:hover {
-        background-color: #EBB332;
+        border-color: #EBB332;
       }
-      border-color: #EBB332;
     }
     &:nth-child(5) {
       &.active, &:hover {
-        background-color: #5847E0;
+        border-color: #5847E0;
       }
-      border-color: #5847E0;
     }
     &:nth-child(2) {
       &.active, &:hover {
-        background-color: #5EC0F3;
+        border-color: #5EC0F3;
       }
-      border-color: #5EC0F3;
+    }
+    &:nth-child(1) {
+      &.active, &:hover {
+        border-color: white;
+      }
     }
     &:not(:first-child) {
       margin-left: 3px;
@@ -294,12 +306,12 @@ export default {
     box-shadow: none;
   }
   & > .btn:not(:last-child):not(.dropdown-toggle), & > .btn-group:not(:last-child) > .btn {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    /*border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;*/
   }
   & > .btn:not(:first-child), & > .btn-group:not(:first-child) > .btn {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    /*border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;*/
   }
 }
 

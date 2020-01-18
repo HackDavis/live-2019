@@ -71,6 +71,7 @@ export default {
 .submit-button {
   width: 100%;
   margin-top: 1rem;
+  border-radius: 500px;
 }
 .submit-button, .nav-link {
   font-weight: 600;
