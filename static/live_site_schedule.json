@@ -16,7 +16,7 @@
             "description": "",
             "time": "",
             "type": "event",
-            "startTime": "Sat, 18 Jan 2020 11:00:00 PST",
+            "startTime": "Sat, 18 Jan 2020 11:30:00 PST",
             "tags": ["All", "Meals"]
         },
         {
@@ -24,8 +24,8 @@
             "description": "",
             "time": "12",
             "type": "event",
-            "startTime": "Sat, 18 Jan 2020 12:00:00 PST",
-            "endTime": "Sat, 18 Jan 2020 13:00:00 PST",
+            "startTime": "Sat, 18 Jan 2020 12:30:00 PST",
+            "endTime": "Sat, 18 Jan 2020 13:30:00 PST",
             "tags": ["All", "Logistics"]
         },
         {
@@ -33,7 +33,7 @@
             "description": "",
             "time": "1",
             "type": "event",
-            "startTime": "Sat, 18 Jan 2020 13:00:00 PST",
+            "startTime": "Sat, 18 Jan 2020 13:30:00 PST",
             "tags": ["All", "Logistics"]
         },
         {
@@ -41,17 +41,17 @@
             "description": "Networking Space. Find your teammates for the next 24 hours here!",
             "time": "",
             "type": "event",
-            "startTime": "Sat, 18 Jan 2020 13:00:00 PST",
-            "endTime": "Sat, 18 Jan 2020 14:00:00 PST",
+            "startTime": "Sat, 18 Jan 2020 13:30:00 PST",
+            "endTime": "Sat, 18 Jan 2020 14:30:00 PST",
             "tags": ["All", "Activities"]
         },
         {
             "name": "Meet and Greet NPOs",
-            "description": "Ballroom A. Come to hear our wonderful NPOs and hear about the causes they're advocating for. This is a great space in which to find your next project idea.",
+            "description": "Ballroom B. Come to hear our wonderful NPOs and hear about the causes they're advocating for. This is a great space in which to find your next project idea.",
             "time": "1:30",
             "type": "event",
-            "startTime": "Sat, 18 Jan 2020 13:30:00 PST",
-            "endTime": "Sat, 18 Jan 2020 14:30:00 PST",
+            "startTime": "Sat, 18 Jan 2020 14:00:00 PST",
+            "endTime": "Sat, 18 Jan 2020 15:00:00 PST",
             "tags": ["All", "Activities"]
         },
         {
@@ -275,9 +275,9 @@
         {
             "name": "Hacking ends",
             "description": "",
-            "time": "1",
+            "time": "1:30",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 13:00:00 PST",
+            "startTime": "Sun, 19 Jan 2020 13:30:00 PST",
             "tags": ["All", "Logistics"]
         },
         {
@@ -285,7 +285,7 @@
             "description": "",
             "time": "",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 13:00:00 PST",
+            "startTime": "Sun, 19 Jan 2020 13:30:00 PST",
             "tags": ["All", "Meals"]
         },
         {
@@ -293,8 +293,8 @@
             "description": "Show off your sweet hack to the judges! Open to the public.",
             "time": "2",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 14:00:00 PST",
-            "endTime": "Sun, 19 Jan 2020 15:30:00 PST",
+            "startTime": "Sun, 19 Jan 2020 14:15:00 PST",
+            "endTime": "Sun, 19 Jan 2020 16:00:00 PST",
             "tags": ["All", "Logistics"]
         },
         {
@@ -302,8 +302,8 @@
             "description": "Closing remarks and awarding of prizes!",
             "time": "4",
             "type": "event",
-            "startTime": "Sun, 19 Jan 2020 16:00:00 PST",
-            "endTime": "Sun, 19 Jan 2020 17:00:00 PST",
+            "startTime": "Sun, 19 Jan 2020 16:30:00 PST",
+            "endTime": "Sun, 19 Jan 2020 17:30:00 PST",
             "tags": ["All", "Logistics"]
         }
     ]
