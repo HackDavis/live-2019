@@ -12,7 +12,7 @@
 <script>
 import CountdownSVG from '@/assets/countdown.svg'
 // Why is this hardcoded? TODO: Read it from the schedule, no time to do now - Ben
-const hackathonEnd = new Date("Sun, 19 Jan 2020 13:00:00 PST")
+const hackathonEnd = new Date("Sun, 19 Jan 2020 13:30:00 PST")
 
 export default {
   data() {
