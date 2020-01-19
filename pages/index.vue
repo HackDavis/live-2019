@@ -28,7 +28,7 @@
         </div>
         <div class="schedule-name d-flex flex-column justify-content-center">
           {{ item.name }}
-            <div class="flex-column justify-content-center schedule-description">
+            <div class="flex-column justify-content-center schedule-description" :class="{ extrapadding: item.description.length > 0 }">
             {{ item.description }}
             </div>
         </div>
@@ -113,7 +113,7 @@ export default {
         return tags;
       }
       else {
-        return tags.filter(el => el.startTime.getUTCDate() == this.date.selected);
+        return tags.filter(el => el.startTime.getDate() == this.date.selected);
       }
     }
   },
@@ -176,10 +176,6 @@ export default {
   }
   transition: 0.1s ease-in-out background-color;
 }
-.schedule-row:hover
-{
-    background: rgba(255, 255, 255, 0.1);
-}
 .schedule-day {
     text-align: center;
   padding: 10px;
@@ -212,6 +208,11 @@ export default {
     padding: 1rem;
     border-top: 1px solid #053848;
   }
+}
+.extrapadding
+{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .schedule-color {
   &.red {

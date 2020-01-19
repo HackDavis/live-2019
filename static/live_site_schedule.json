@@ -223,6 +223,15 @@
             "tags": ["All", "Workshops"]
         },
         {
+            "name": "Land Your Dream Job or Internship",
+            "description": "Ballroom B. Figure out how to start the career you've always dreamed of!",
+            "time": "",
+            "type": "event",
+            "startTime": "Sat, 18 Jan 2020 23:00:00 PST",
+            "endTime": "Sun, 19 Jan 2020 00:00:00 PST",
+            "tags": ["All", "Workshops"]
+        },
+        {
             "name": "Midnight snack",
             "description": "",
             "time": "12",
