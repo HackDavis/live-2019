@@ -24,7 +24,7 @@
     "bootstrap-vue": "^2.2.0",
     "cross-env": "^5.2.0",
     "nuxt": "^2.11.0",
-    "parse": "^2.1.0",
+    "parse": "^2.10.0",
     "vue-tweet-embed": "^2.2.1"
   },
   "devDependencies": {
